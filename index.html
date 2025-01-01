@@ -74,17 +74,18 @@
         }
 
         .image-banner {
-            max-width: 80%; /* Ajustado para PC */
-            margin: 20px auto; /* Centralizando o banner */
+            width: 90%; /* O banner terá uma largura de 90% da tela */
+            height: 300px; /* Altura controlada */
+            margin: 0 auto; /* Centraliza o banner */
             text-align: center;
             animation: fadeIn 1.5s ease-in-out;
         }
 
         .image-banner img {
             width: 100%; /* Faz a imagem ocupar toda a largura do container */
-            height: auto; /* A altura se ajusta automaticamente para manter a proporção */
+            height: 100%; /* Faz a imagem cobrir toda a altura */
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 0; /* Removendo bordas arredondadas */
             box-shadow: 0 0 20px #9b00ff; /* Roxo mais claro no box-shadow */
         }
 
@@ -111,11 +112,12 @@
         /* Media query para dispositivos móveis */
         @media screen and (max-width: 768px) {
             .image-banner {
-                max-width: 100%; /* Faz o banner ocupar toda a largura no celular */
+                height: 250px; /* A altura do banner será menor no celular */
+                width: 90%; /* A largura do banner também será 90% */
             }
 
             .image-banner img {
-                height: 250px; /* Ajusta a altura do banner em telas pequenas */
+                height: 100%; /* A altura do banner se ajusta para telas pequenas */
             }
         }
     </style>
