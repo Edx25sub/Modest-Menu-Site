@@ -9,42 +9,47 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000000; /* Preto puro */
+            background-color: #000000;
             color: #e4e4e4;
             overflow-x: hidden;
         }
 
         header {
-            background-color: #111111; /* Preto mais escuro */
+            background-color: #111111;
             color: #ffffff;
             padding: 20px;
             text-align: center;
             animation: fadeIn 1.5s ease-in-out;
-            text-shadow: 0 0 8px #9b00ff, 0 0 15px #9b00ff, 0 0 20px #9b00ff; /* LED no título */
+            text-shadow: 0 0 8px #9b00ff, 0 0 15px #9b00ff, 0 0 20px #9b00ff;
         }
 
         .container {
-            max-width: 80%; /* Ajustado para ter o mesmo tamanho que o banner */
+            max-width: 80%;
             margin: 20px auto;
             padding: 20px;
-            background: #111111; /* Preto mais escuro */
+            background: #111111;
             border-radius: 10px;
-            box-shadow: 0 0 15px #9b00ff; /* Roxo mais claro no box-shadow */
+            box-shadow: 0 0 15px #9b00ff;
             animation: slideIn 1s ease-in-out;
         }
 
         .file-item {
             margin-bottom: 20px;
             padding: 15px;
-            border: 2px solid #6a006a; /* Roxo mais escuro nas bordas */
+            border: 2px solid #6a006a;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #000000; /* Fundo preto dentro do item */
+            background-color: #000000;
             color: #ffffff;
             animation: fadeIn 1s ease-in-out;
-            box-shadow: 0 0 10px #9b00ff; /* Roxo mais claro no box-shadow */
+            box-shadow: 0 0 10px #9b00ff;
+            transition: transform 0.3s;
+        }
+
+        .file-item:hover {
+            transform: scale(1.05);
         }
 
         .file-item img {
@@ -52,51 +57,110 @@
             max-height: 150px;
             margin-right: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px #9b00ff; /* Roxo mais claro no box-shadow */
+            box-shadow: 0 0 10px #9b00ff;
         }
 
         .file-item button {
-            background-color: #8e00ff; /* Roxo mais escuro */
+            background-color: #8e00ff;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 15px 30px;
+            border-radius: 8px;
             cursor: pointer;
+            font-size: 16px;
             transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-            text-shadow: 0 0 5px #ffffff, 0 0 10px #9b00ff, 0 0 15px #9b00ff; /* LED no botão */
-            box-shadow: 0 0 10px #9b00ff; /* Roxo mais claro no box-shadow */
+            text-shadow: 0 0 5px #ffffff, 0 0 10px #9b00ff, 0 0 15px #9b00ff;
+            box-shadow: 0 0 10px #9b00ff;
         }
 
         .file-item button:hover {
-            background-color: #a700ff; /* Roxo mais claro */
-            transform: scale(1.1);
-            box-shadow: 0 0 20px #9b00ff; /* Roxo mais claro no box-shadow */
+            background-color: #a700ff;
+            transform: scale(1.2);
+            box-shadow: 0 0 25px #9b00ff;
         }
 
         .image-banner {
-            width: 90%; /* O banner terá uma largura de 90% da tela */
-            height: 300px; /* Altura controlada */
-            margin: 0 auto; /* Centraliza o banner */
+            width: 80%;
+            height: 300px;
+            margin: 20px auto;
             text-align: center;
             animation: fadeIn 1.5s ease-in-out;
         }
 
         .image-banner img {
-            width: 100%; /* Faz a imagem ocupar toda a largura do container */
-            height: 100%; /* Faz a imagem cobrir toda a altura */
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border-radius: 0; /* Removendo bordas arredondadas */
-            box-shadow: 0 0 20px #9b00ff; /* Roxo mais claro no box-shadow */
+            border-radius: 10px;
+            box-shadow: 0 0 20px #9b00ff;
         }
 
-        footer {
+        /* Propaganda Discord (tela cheia) */
+        .discord-message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo transparente com opacidade */
+            color: #ffffff;
+            padding: 20px;
             text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #111111; /* Preto mais escuro */
-            color: #e4e4e4;
-            animation: fadeIn 2s ease-in-out;
-            text-shadow: 0 0 5px #9b00ff; /* Roxo mais claro no texto */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Fica acima de outros elementos */
+            animation: slideInUp 2s ease-in-out;
+        }
+
+        .discord-message img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px #9b00ff;
+        }
+
+        .discord-message p {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .discord-message button {
+            background-color: #ffffff;
+            color: #8e00ff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+            text-shadow: 0 0 5px #ffffff, 0 0 10px #9b00ff, 0 0 15px #9b00ff;
+            box-shadow: 0 0 10px #9b00ff;
+        }
+
+        .discord-message button:hover {
+            background-color: #9b00ff;
+            color: white;
+            transform: scale(1.2);
+            box-shadow: 0 0 25px #9b00ff;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: #ff0000;
         }
 
         @keyframes fadeIn {
@@ -109,17 +173,11 @@
             to { transform: translateY(0); opacity: 1; }
         }
 
-        /* Media query para dispositivos móveis */
-        @media screen and (max-width: 768px) {
-            .image-banner {
-                height: 250px; /* A altura do banner será menor no celular */
-                width: 90%; /* A largura do banner também será 90% */
-            }
-
-            .image-banner img {
-                height: 100%; /* A altura do banner se ajusta para telas pequenas */
-            }
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
+
     </style>
 </head>
 <body>
@@ -128,8 +186,17 @@
         <p>By Edx25_Sub</p>
     </header>
 
+    <!-- Propaganda Discord (tela cheia) -->
+    <div id="discordMessage" class="discord-message">
+        <button class="close-btn" onclick="closeMessage()">&times;</button>
+        <img src="https://i.postimg.cc/ZKHwtBdN/Mod-Menu-Logo.jpg" alt="Logo Discord">
+        <p><strong>Entre No Nosso Servidor Do Discord !!!</strong></p>
+        <!-- Modificado para abrir em nova aba -->
+        <button onclick="window.open('https://discord.gg/He9TGJxA74', '_blank')">Acessar Servidor</button>
+    </div>
+
     <div class="image-banner">
-        <img src="https://cdn.discordapp.com/attachments/1311352831520800802/1323829678091538472/Modest_Menu.png?ex=6775eff6&is=67749e76&hm=955a5bc4b1fe061d3f6255f7b8f53ed4c4919ecdb322b7e780b134c086404a73&" alt="Banner Principal">
+        <img src="https://i.postimg.cc/d3G6HnMM/Modest-Menu-1.png" alt="Banner Principal">
     </div>
 
     <div class="container">
@@ -137,24 +204,24 @@
         <div id="fileList">
             <div class="file-item">
                 <div>
-                    <p><strong>Amnesia Mod Menu</strong> </p>
-                    <img src="https://cdn.discordapp.com/attachments/1322726397428629607/1323457224525217842/image.png?ex=6775e696&is=67749516&hm=41f199f40f65552e9932588fddab8d74528c194460dac6a98244ec0f7d0de5d6&" alt="Imagem do Arquivo 1">
+                    <p><strong>Amnesia Mod Menu</strong></p>
+                    <img src="https://i.postimg.cc/MX30cB7r/amnesia.png" alt="Imagem do Arquivo 1">
                 </div>
-                <button onclick="redirectToLink('https://link-hub.net/1241088/amnesia-launcher ')">Download</button>
+                <button onclick="window.location.href='https://link-hub.net/1241088/amnesia-launcher'">Download</button>
             </div>
             <div class="file-item">
                 <div>
-                    <p><strong>Yim Menu</strong> </p>
-                    <img src="https://cdn.discordapp.com/attachments/1320069291667882134/1323832748485513276/image.png?ex=6775f2d2&is=6774a152&hm=ebb7b5ee791b166f7278ea8e1f4d79fe69d3c1bda1aa0a8b8449cd50496ef659&" alt="Imagem do Arquivo 2">
+                    <p><strong>Yim Menu</strong></p>
+                    <img src="https://i.postimg.cc/nC6v2tw4/yim-menu.png" alt="Imagem do Arquivo 2">
                 </div>
-                <button onclick="redirectToLink('https://direct-link.net/1241088/yim-menu')">Download</button>
+                <button onclick="window.location.href='https://direct-link.net/1241088/yim-menu'">Download</button>
             </div>
             <div class="file-item">
                 <div>
-                    <p><strong>Tessio Menu</strong> </p>
-                    <img src="https://cdn.discordapp.com/attachments/1316899442590224435/1323833278750392394/image.png?ex=6775f351&is=6774a1d1&hm=c04f9e8472f42129c76e598f16d9f6b3f192737ee9f45b9d44b4b79194812c60&" alt="Imagem do Arquivo 3">
+                    <p><strong>Tessio Menu</strong></p>
+                    <img src="https://cdn.discordapp.com/attachments/1324024202222768240/1324024287853674527/tessio_menu.png?ex=6776a535&is=677553b5&hm=c87bd863e9e7512c8842cdbad9ea2e4ad2d09adff5e3013a1395e41c45d9e4f7&" alt="Imagem do Arquivo 3">
                 </div>
-                <button onclick="redirectToLink('https://link-hub.net/1241088/tessio-mod-menu')">Download</button>
+                <button onclick="window.location.href='https://link-hub.net/1241088/tessio-mod-menu'">Download</button>
             </div>
         </div>
     </div>
@@ -164,9 +231,11 @@
     </footer>
 
     <script>
-        function redirectToLink(url) {
-            window.location.href = url; // Redireciona para o link especificado
+        // Função para fechar a propaganda
+        function closeMessage() {
+            document.getElementById('discordMessage').style.display = 'none';
         }
     </script>
+
 </body>
 </html>
