@@ -74,7 +74,7 @@
         }
 
         .image-banner {
-            max-width: 100%; /* O banner ocupa toda a largura disponível */
+            max-width: 80%; /* Ajustado para PC */
             margin: 20px auto; /* Centralizando o banner */
             text-align: center;
             animation: fadeIn 1.5s ease-in-out;
@@ -108,45 +108,14 @@
             to { transform: translateY(0); opacity: 1; }
         }
 
-        .discord-link {
-            text-align: center;
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #9b00ff;
-            color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 15px #9b00ff;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-        }
-
-        .discord-link:hover {
-            background-color: #a700ff;
-            transform: scale(1.05);
-            box-shadow: 0 0 20px #9b00ff;
-        }
-
-        .discord-logo img {
-            max-width: 200px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px #9b00ff;
-        }
-
-        /* Adicionando media query para telas pequenas (dispositivos móveis) */
+        /* Media query para dispositivos móveis */
         @media screen and (max-width: 768px) {
-            .file-item {
-                flex-direction: column; /* Deixa os itens de arquivo em coluna em vez de linha */
-                align-items: flex-start; /* Alinha à esquerda */
-            }
-
-            .file-item img {
-                max-width: 100%; /* A imagem fica 100% da largura disponível */
-                margin-bottom: 10px; /* Adiciona espaçamento abaixo das imagens */
+            .image-banner {
+                max-width: 100%; /* Faz o banner ocupar toda a largura no celular */
             }
 
             .image-banner img {
-                height: 300px; /* Ajusta a altura do banner para se adaptar à tela */
+                height: 250px; /* Ajusta a altura do banner em telas pequenas */
             }
         }
     </style>
@@ -186,15 +155,6 @@
                 <button onclick="redirectToLink('https://link-hub.net/1241088/tessio-mod-menu')">Download</button>
             </div>
         </div>
-    </div>
-
-    <!-- Logo do servidor Discord -->
-    <div class="discord-logo">
-        <img src="https://cdn.discordapp.com/attachments/1311352831520800802/1323828625086091274/Untitled_logo_1_free-file.jpg?ex=6775eefb&is=67749d7b&hm=53876c64951acf28f7dbff498329bd58e6afe6a2a62ed99fac7fd091b9166c94&" alt="Logo do Discord">
-    </div>
-
-    <div class="discord-link" onclick="redirectToLink('https://discord.gg/He9TGJxA74')">
-        <p>Entre no nosso servidor do Discord!</p>
     </div>
 
     <footer>
