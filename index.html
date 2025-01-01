@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Arquivos para Download</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Preto puro */
+            color: #e4e4e4;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #111111; /* Preto mais escuro */
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+            text-shadow: 0 0 8px #9b00ff, 0 0 15px #9b00ff, 0 0 20px #9b00ff; /* LED no título */
+        }
+
+        .container {
+            max-width: 80%; /* Ajustado para ter o mesmo tamanho que o banner */
+            margin: 20px auto;
+            padding: 20px;
+            background: #111111; /* Preto mais escuro */
+            border-radius: 10px;
+            box-shadow: 0 0 15px #9b00ff; /* Roxo mais claro no box-shadow */
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .file-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #6a006a; /* Roxo mais escuro nas bordas */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #000000; /* Fundo preto dentro do item */
+            color: #ffffff;
+            animation: fadeIn 1s ease-in-out;
+            box-shadow: 0 0 10px #9b00ff; /* Roxo mais claro no box-shadow */
+        }
+
+        .file-item img {
+            max-width: 150px;
+            max-height: 150px;
+            margin-right: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #9b00ff; /* Roxo mais claro no box-shadow */
+        }
+
+        .file-item button {
+            background-color: #8e00ff; /* Roxo mais escuro */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+            text-shadow: 0 0 5px #ffffff, 0 0 10px #9b00ff, 0 0 15px #9b00ff; /* LED no botão */
+            box-shadow: 0 0 10px #9b00ff; /* Roxo mais claro no box-shadow */
+        }
+
+        .file-item button:hover {
+            background-color: #a700ff; /* Roxo mais claro */
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #9b00ff; /* Roxo mais claro no box-shadow */
+        }
+
+        .image-banner {
+            max-width: 80%; /* O banner não ocupará toda a largura da tela */
+            margin: 20px auto; /* Centralizando o banner */
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .image-banner img {
+            width: 100%; /* Faz a imagem ocupar toda a largura do container */
+            height: 400px; /* Mantendo a altura controlada */
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 0 20px #9b00ff; /* Roxo mais claro no box-shadow */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #111111; /* Preto mais escuro */
+            color: #e4e4e4;
+            animation: fadeIn 2s ease-in-out;
+            text-shadow: 0 0 5px #9b00ff; /* Roxo mais claro no texto */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Modest Menu Executores</h1>
+        <p>By Edx25_Sub</p>
+    </header>
+
+    <div class="image-banner">
+        <img src="https://cdn.discordapp.com/attachments/1311352831520800802/1323829678091538472/Modest_Menu.png?ex=6775eff6&is=67749e76&hm=955a5bc4b1fe061d3f6255f7b8f53ed4c4919ecdb322b7e780b134c086404a73&" alt="Banner Principal">
+    </div>
+
+    <div class="container">
+        <h2>Executores</h2>
+        <div id="fileList">
+            <div class="file-item">
+                <div>
+                    <p><strong>Amnesia Mod Menu</strong> </p>
+                    <img src="https://cdn.discordapp.com/attachments/1322726397428629607/1323457224525217842/image.png?ex=67753dd6&is=6773ec56&hm=5bd941c023ee32d24be3b912acacc545880783598d4b33b0f59d05fef0344de7&" alt="Imagem do Arquivo 1">
+                </div>
+                <button onclick="redirectToLink('https://example.com/arquivo1')">Download</button>
+            </div>
+            <div class="file-item">
+                <div>
+                    <p><strong>Yim Menu</strong> </p>
+                    <img src="https://cdn.discordapp.com/attachments/1320069291667882134/1323832748485513276/image.png?ex=6775f2d2&is=6774a152&hm=ebb7b5ee791b166f7278ea8e1f4d79fe69d3c1bda1aa0a8b8449cd50496ef659&" alt="Imagem do Arquivo 2">
+                </div>
+                <button onclick="redirectToLink('https://example.com/arquivo2')">Download</button>
+            </div>
+            <div class="file-item">
+                <div>
+                    <p><strong>Tessio Menu</strong> </p>
+                    <img src="https://cdn.discordapp.com/attachments/1316899442590224435/1323833278750392394/image.png?ex=6775f351&is=6774a1d1&hm=c04f9e8472f42129c76e598f16d9f6b3f192737ee9f45b9d44b4b79194812c60&" alt="Imagem do Arquivo 3">
+                </div>
+                <button onclick="redirectToLink('https://example.com/arquivo3')">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 - Modest Menu - By Edx25_Sub</p>
+    </footer>
+
+    <script>
+        function redirectToLink(url) {
+            window.location.href = url; // Redireciona para o link especificado
+        }
+    </script>
+</body>
+</html>
