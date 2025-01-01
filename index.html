@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modest Menu</title> <!-- Alterado para "Modest Menu" -->
+    <title>Modest Menu</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -74,7 +74,7 @@
         }
 
         .image-banner {
-            max-width: 80%; /* O banner não ocupará toda a largura da tela */
+            max-width: 100%; /* O banner ocupa toda a largura disponível */
             margin: 20px auto; /* Centralizando o banner */
             text-align: center;
             animation: fadeIn 1.5s ease-in-out;
@@ -82,7 +82,7 @@
 
         .image-banner img {
             width: 100%; /* Faz a imagem ocupar toda a largura do container */
-            height: 400px; /* Mantendo a altura controlada */
+            height: auto; /* A altura se ajusta automaticamente para manter a proporção */
             object-fit: cover;
             border-radius: 12px;
             box-shadow: 0 0 20px #9b00ff; /* Roxo mais claro no box-shadow */
@@ -131,6 +131,23 @@
             margin-top: 20px;
             border-radius: 10px;
             box-shadow: 0 0 15px #9b00ff;
+        }
+
+        /* Adicionando media query para telas pequenas (dispositivos móveis) */
+        @media screen and (max-width: 768px) {
+            .file-item {
+                flex-direction: column; /* Deixa os itens de arquivo em coluna em vez de linha */
+                align-items: flex-start; /* Alinha à esquerda */
+            }
+
+            .file-item img {
+                max-width: 100%; /* A imagem fica 100% da largura disponível */
+                margin-bottom: 10px; /* Adiciona espaçamento abaixo das imagens */
+            }
+
+            .image-banner img {
+                height: 300px; /* Ajusta a altura do banner para se adaptar à tela */
+            }
         }
     </style>
 </head>
